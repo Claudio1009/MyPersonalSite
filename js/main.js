@@ -1,15 +1,4 @@
-// var navbar = document.getElementById("navbar");
-// var scrolled = false;
 
-// window.onscroll = function() {
-//     if (window.scrollY > 50 && !scrolled) {
-//         navbar.style.transform = "translateY(-50px)";
-//         scrolled = true;
-//     } else if (window.scrollY <= 50 && scrolled) {
-//         navbar.style.transform = "translateY(0)";
-//         scrolled = false;
-//     }
-// };
 
 window.addEventListener("scroll",function(){
     const header = document.querySelector("header")
@@ -112,33 +101,6 @@ ScrollReveal().reveal('.skills-description, .contact-left h2',{delay: 700, origi
 ScrollReveal().reveal('.education, .portfolio .img-card',{delay: 800, origin: 'bottom', interval: 200});
 ScrollReveal().reveal('footer .group',{delay: 500, origin: 'top',interval: 200});
 
-//Message send
-
-function sendMail() {
-    var params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value
-    };
-
-    const serviceID = "service_j2vzgf2";
-   
-    const templateID = "template_3qnttql";
-
-    emailjs
-        .send(serviceID, templateID, params)
-        .then(
-            (response) => {
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("subject").value = "";
-                document.getElementById("message").value = "";
-                console.log("Email sent successfully:", response);
-                alert("Your message was sent successfully!");
-            })
-            .catch((err) => console.log(err));
-            }
         
 
 
