@@ -8,14 +8,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function(){
-  emailjs.init("HR2WG9qnjHvKJRBwY");
-})();
-</script>
+    <link rel="icon" href="image/icon.png" type="image">
 </head>
 <body>
     <!--Scroll to top button-->
@@ -76,9 +69,9 @@
             </div>
             <div class="about-inf">
                 <div class="description">
-                    <h3>I'm Claudiu</h3>
+                    <h3>Hey, my name's Claudiu!</h3>
                     <h4><span>A computer science student </span>at the <span>Faculty of Automation and Computers </span>of the Polytechnic University of Bucharest</h4>
-                    <p>Hey, my name's Claudiu!As you've probably already guessed, I love to spend my days learning and improving my knowledge in web development.<br>
+                    <p>As you've probably already guessed, I love to spend my days learning and improving my knowledge in web development.<br>
                         I first discovered coding at the age of 15, but it wasn't until the second year of high school that I knew it was for me. I will always be grateful to the computer science teacher who managed to guide me in the secrets of programming.<br>
                         My strength lies in distributed attention and quick learning.I am also a team player who is proven to thrive in a collaborative environment.
                         </p>
@@ -123,7 +116,35 @@
         <h1 class="sec-title-1">Portfolio</h1>
         <h2 class="sec-title-2">Portfolio</h2>
         <div class="content">
-            <div class="portfolio-list">
+            <!--AICI TREBUIE SA REVIN <div class="portfolio-list"> -->
+                <!--Test-->
+                <div class="portfolio-list">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide-1">
+                                <!-- Conținutul slide-ului 1 -->
+                            </div>
+                            <div class="swiper-slide slide-2">
+                                <!-- Conținutul slide-ului 2 -->
+                            </div>
+                            <div class="swiper-slide slide-3">
+                                <!-- Conținutul slide-ului 3 -->
+                            </div>
+                            <div class="swiper-slide slide-4">
+                                <!-- Conținutul slide-ului 4 -->
+                            </div>
+                            <div class="swiper-slide slide-5">
+                                <!-- Conținutul slide-ului 5 -->
+                            </div>
+                        </div>
+                        <!-- Adaugă paginația și butoanele de navigare aici (dacă dorești) -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!--Test final-->
+                </div>
                 <div class="img-card-container">
                     <div class="img-card">
                         <div class="overlay">
@@ -163,10 +184,15 @@
                             </h3>  
                             <span><a href="mailto:claudiuciupitu7@gmail.com">claudiuciupitu7@gmail.com</a></span>
                           </li>
+                          <p>If you have any oppurtunities, ideas or<br>
+                             questions you want to throw my way,<br>
+                              don't hesitate to message me!</p>
                     </ul>
+            
                 </div>
                 <div class="contact-right">
-                    <p>Lorem ipsum dolor sit amet<br> consectetur adipisicing elit. Iste, enim.</p>
+                    <h1>Ready to build something great?<br>Complete this form!</h1>
+                    
                     <form  class="contact-form">
                         <div class="first-row">
                             <input type="text" name="name" id="name" placeholder="Name">
@@ -218,5 +244,6 @@
 </footer>
     <!--Scripting-->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

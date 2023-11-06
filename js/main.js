@@ -101,6 +101,19 @@ ScrollReveal().reveal('.skills-description, .contact-left h2',{delay: 700, origi
 ScrollReveal().reveal('.education, .portfolio .img-card',{delay: 800, origin: 'bottom', interval: 200});
 ScrollReveal().reveal('footer .group',{delay: 500, origin: 'top',interval: 200});
 
-        
-
+document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true, // Activează bucla infinită
+    });
+});
 

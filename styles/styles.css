@@ -848,3 +848,55 @@ footer .footer-container{
         margin-bottom: 80px;
     }
 }
+
+/* Stilizare pentru slide-ul 1 */
+.slide-1 {
+    background-color: #27ae60; /* Fundal verde */
+    color: #fff; /* Text alb */
+}
+
+/* Stilizare pentru slide-ul 2 */
+.slide-2 {
+    background-color: #3498db; /* Fundal albastru */
+    color: #fff; /* Text alb */
+}
+
+/* Stilizare pentru slide-ul 3 */
+.slide-3 {
+    background-color: #e67e22; /* Fundal portocaliu */
+    color: #fff; /* Text alb */
+}
+
+/* Stilizare pentru slide-ul 4 */
+.slide-4 {
+    background-color: #f39c12; /* Fundal galben */
+    color: #fff; /* Text alb */
+}
+
+/* Stilizare pentru slide-ul 5 */
+.slide-5 {
+    background-color: #e74c3c; /* Fundal roșu */
+    color: #fff; /* Text alb */
+}
+
+/* Stilizare pentru containerul slide-urilor Swiper */
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stilizare pentru div-urile slide-urilor Swiper */
+.swiper-slide {
+    width: 100%; /* Lățimea slide-ului */
+    max-width: 300px; /* Lățimea maximă a slide-ului (poate fi ajustată) */
+    height: 300px; /* Înălțimea slide-ului */
+    background-color: #3498db; /* Culoarea de fundal */
+    color: #fff; /* Culoarea textului */
+    text-align: center; /* Aliniere text în centru */
+    display: flex; /* Afișează conținutul într-un container flexibil */
+    justify-content: center; /* Aliniere orizontală în centru */
+    align-items: center; /* Aliniere verticală în centru */
+    font-size: 24px; /* Dimensiunea textului */
+}
+
