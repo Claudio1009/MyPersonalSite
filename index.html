@@ -275,6 +275,46 @@
         <p>All rights reserved 2023</p>
     </div>
 </footer>
+<!---------------POP-UP---------------->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <p id="popup-message"></p>
+        <button class="close-popup-button">Închide</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".contact-form").submit(function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "send-email.php",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(response) {
+                $("#popup-message").text(response.message);
+                $("#popup").show();
+            },
+            error: function() {
+                $("#popup-message").text("Eroare la trimiterea mesajului. Te rugăm să încerci din nou mai târziu.");
+                $("#popup").show();
+            }
+        });
+    });
+
+    $(".close-popup").click(function() {
+        $("#popup").hide();
+    });
+
+    $(".close-popup-button").click(function() {
+        $("#popup").hide();
+    });
+});
+</script>
     <!--Scripting-->
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -1,35 +1,25 @@
 <?php
+$response = array();
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nume = $_POST["name"];
+    $email = $_POST["email"];
+    $subiect = $_POST["subject"];
+    $mesaj = $_POST["message"];
+    
+    $destinatar = "claudiuciupitu7@gmail.com"; // Adresa la care vrei să primești e-mailurile
+    $subiect_email = "Mesaj nou de la $nume: $subiect";
+    $continut_email = "Nume: $nume\nEmail: $email\nSubiect: $subiect\nMesaj: $mesaj";
+    
+    // Trimite e-mailul și verifică dacă a fost trimis cu succes
+    if (mail($destinatar, $subiect_email, $continut_email)) {
+        $response["success"] = true;
+        $response["message"] = "Mesajul a fost trimis cu succes!";
+    } else {
+        $response["success"] = false;
+        $response["message"] = "Eroare la trimiterea mesajului. Te rugăm să încerci din nou mai târziu.";
+    }
+}
 
-$mailheader = "From: ".$name."<".$email.">\r\n";
-
-$recipient = "claudiuciupitu7@gmail.com";
-
-mail($recipient, $subject, $message, $mailheader)
-or die("Error!");
-
-echo'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Form</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-<div class="container">
-<h2>Thank you for contacting me. I will get back to you as
-soon as possible!</h2>
-<p>Go back to the <a href="index.html">homepage</a></p>
-</div>
-</body>
-</html>'
-
-
+echo json_encode($response);
 ?>
