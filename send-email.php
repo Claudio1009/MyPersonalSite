@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subiect = $_POST["subject"];
     $mesaj = $_POST["message"];
     
-    $destinatar = "claudiuciupitu7@gmail.com"; // Adresa la care vrei să primești e-mailurile
+    $destinatar = "starkfamous9@gmail.com"; // Adresa la care vrei să primești e-mailurile
     $subiect_email = "Mesaj nou de la $nume: $subiect";
     $continut_email = "Nume: $nume\nEmail: $email\nSubiect: $subiect\nMesaj: $mesaj";
     
